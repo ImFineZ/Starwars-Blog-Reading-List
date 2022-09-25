@@ -8,7 +8,7 @@ export const Card = (props) => {
       <img src={props.img} className="card-img-top" height={200} alt="..." />
       <div className="card-body">
         <h5 className="card-title">{props.name}</h5>
-        <div className="container d-flex">
+        <div className="container">
           <div className="float-start">
             <Link
               to={
@@ -21,7 +21,7 @@ export const Card = (props) => {
             </Link>
           </div>
           <div className="float-end">
-            <a lin className="btn btn-warning mx-5">
+            <a className="btn btn-warning " > 
               <i className="bi bi-suit-heart" />
             </a>
           </div>

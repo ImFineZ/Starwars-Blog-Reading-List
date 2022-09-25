@@ -13,7 +13,7 @@ export const Home = () => {
             {store.characters.map((singlename, index) => {
               return (
                 <Card
-                img={store.imgPersonas[index].url}
+                  img={store.imgPersonas[index].url}
                   key={index}
                   name={singlename.name}
                   type="characters"
@@ -31,7 +31,7 @@ export const Home = () => {
             {store.planets.map((singlename, index) => {
               return (
                 <Card
-                img={store.imgPlanetas[index].url}
+                  img={store.imgPlanetas[index].url}
                   key={index}
                   name={singlename.name}
                   type="planets"

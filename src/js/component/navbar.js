@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
+  const { store, actions } = useContext(Context);
   return (
     <div className="container">
       <nav className="navbar navbar-light bg-light mb-3">
@@ -21,11 +24,23 @@ export const Navbar = () => {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown link
+              Favorites
             </a>
             <ul className="dropdown-menu">
               <li>
                 <a className="dropdown-item" href="#">
+                 {/*  <button
+                    className="btn btn-outline-warning dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <p className="d-flex p-0 m-0">
+                       {store.favoritoNuevo.length - 1}
+                    </p>
+                  </button> */}
                   Action
                 </a>
               </li>
