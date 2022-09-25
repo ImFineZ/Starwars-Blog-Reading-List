@@ -1,8 +1,9 @@
-/* import React, { Component } from "react"; */
-import React from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Card = (props) => {
+  const { store, actions } = useContext(Context);
   return (
     <div className="card col-4 mx-2">
       <img src={props.img} className="card-img-top" height={200} alt="..." />
@@ -20,13 +21,18 @@ export const Card = (props) => {
               Ver mas!
             </Link>
           </div>
-          <div className="float-end">
+          <button /* onClick={()=>{
+              actions.setFav([...store.fav,{name: props.name}]);
+              console.log(store)
+            }} */
+           className="float-end">
             <a className="btn btn-warning " > 
               <i className="bi bi-suit-heart" />
             </a>
-          </div>
+          </button>
         </div>
       </div>
     </div>
   );
 };
+

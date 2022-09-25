@@ -23,30 +23,20 @@ export const Navbar = (props) => {
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              
             >
               Favorites
             </a>
             <ul className="dropdown-menu">
               <li>
-                <a className="dropdown-item" href="#">
-                 {/*  <button
-                    className="btn btn-outline-warning dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    <p className="d-flex p-0 m-0">
-                       {store.favoritoNuevo.length - 1}
-                    </p>
-                  </button> */}
-                  Action
-                </a>
+                <div className="dropdown-item" href="#"/>
+
               </li>
             </ul>
           </div>
         </div>
+
+
       </nav>
     </div>
   );

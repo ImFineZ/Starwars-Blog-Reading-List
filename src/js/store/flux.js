@@ -79,7 +79,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           url: "https://pm1.narvii.com/6594/9a9044c1ef56788efcbe4b4015043a306b49ece6_hq.jpg",
         },
       ],
-      favoritos:[{name: ""}]
+      favoritos: [{ name: "" }],
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -111,19 +111,19 @@ const getState = ({ getStore, getActions, setStore }) => {
         //reset the global store
         setStore({ demo: demo });
       },
-      agregarFavorito: favoritoNuevo =>{
-        setStore({favoritos: favoritoNuevo});
-      },
-      setFavorito: idFavorito =>{
-        const store = getStore();
-        let newArray = [];
-        store.favoritoNuevo.filter(function(favorito, i){
-          if (i !== idFavorito) {
-            newArray.push(favorito);
-          }
-        });
-        setStore({favoritoNuevo: newArray});
-      },
+     /*  setFav: elementoNuevo => {
+				setStore({ fav: elementoNuevo });
+			},
+      setBorrarIDElement: idelement => {
+				const store = getStore();
+				let newArray = [];
+				store.fav.filter(function(element, i) {
+					if (i !== idelement) {
+						newArray.push(element);
+					}
+				});
+				setStore({ fav: newArray });
+			}, */
       informacionIndividualPeople: (id) => {
         fetch("https://www.swapi.tech/api/people/" + id)
           .then((resp) => resp.json())
