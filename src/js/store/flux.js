@@ -80,6 +80,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         },
       ],
       favoritos: [{ name: "" }],
+      
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -111,19 +112,22 @@ const getState = ({ getStore, getActions, setStore }) => {
         //reset the global store
         setStore({ demo: demo });
       },
-     /*  setFav: elementoNuevo => {
-				setStore({ fav: elementoNuevo });
+      setFavorito: elementoNuevo => {
+				setStore({ favoritos: elementoNuevo});
+        console.log("Los favoritos son",elementoNuevo);
+      
 			},
-      setBorrarIDElement: idelement => {
+      
+      BorrarIdElement: idelement => {
 				const store = getStore();
 				let newArray = [];
-				store.fav.filter(function(element, i) {
+				store.favoritos.filter(function(element, i) {
 					if (i !== idelement) {
 						newArray.push(element);
 					}
 				});
-				setStore({ fav: newArray });
-			}, */
+				setStore({ favoritos: newArray });
+			},
       informacionIndividualPeople: (id) => {
         fetch("https://www.swapi.tech/api/people/" + id)
           .then((resp) => resp.json())

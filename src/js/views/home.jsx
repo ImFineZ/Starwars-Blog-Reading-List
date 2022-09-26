@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <div>
       <div className="container">
-        <h1 className="text-danger mx-2">Character</h1>
+        <h1 className="text-muted">Character</h1>
         <div className="overflow-auto">
           <div className="d-flex">
             {store.characters.map((singlename, index) => {
@@ -25,7 +25,7 @@ export const Home = () => {
         </div>
       </div>
       <div className="container">
-        <h1 className="text-danger mx-2 mt-4">Planets</h1>
+        <h1 className="text-muted">Planets</h1>
         <div className="overflow-auto">
           <div className="d-flex">
             {store.planets.map((singlename, index) => {

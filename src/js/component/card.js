@@ -10,7 +10,7 @@ export const Card = (props) => {
       <div className="card-body">
         <h5 className="card-title">{props.name}</h5>
         <div className="container">
-          <div className="float-start">
+          <div className="float-start ">
             <Link
               to={
                 props.type === "planets"
@@ -21,10 +21,10 @@ export const Card = (props) => {
               Ver mas!
             </Link>
           </div>
-          <button /* onClick={()=>{
-              actions.setFav([...store.fav,{name: props.name}]);
+          <button onClick={()=>{
+              actions.setFavorito([...store.favoritos,{name: props.name}]);
               console.log(store)
-            }} */
+            }}
            className="float-end">
             <a className="btn btn-warning " > 
               <i className="bi bi-suit-heart" />

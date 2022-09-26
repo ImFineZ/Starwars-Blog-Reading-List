@@ -1,9 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
-export const Navbar = (props) => {
+export const Navbar = () => {
   const { store, actions } = useContext(Context);
   return (
     <div className="container">
@@ -11,7 +10,7 @@ export const Navbar = (props) => {
         <Link to="/">
           <img
             width={100}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png"
+            src="https://w7.pngwing.com/pngs/633/357/png-transparent-star-wars-logo-cupcake-r2-d2-anakin-skywalker-c-3po-chewbacca-star-wars-logo-blue-text-trademark.png"
             className="mx-2"
           />
         </Link>
@@ -25,12 +24,30 @@ export const Navbar = (props) => {
               aria-expanded="false"
               
             >
-              Favorites
+              Favorites {(store.favoritos.length-1)}
             </a>
             <ul className="dropdown-menu">
               <li>
                 <div className="dropdown-item" href="#"/>
-
+                  {store.favoritos.map((element, i)=>{
+                    if (element.name !== "") {
+                      return(
+                        <div
+											key={i}
+											className="dropdown-item liS d-flex justify-content-between"
+											href="#">
+											<p className="m-0">{element.name}</p>
+											<i
+												onClick={() => {
+													actions.BorrarIdElement(i);
+												}}
+												className="bi bi-trash2-fill"
+                        
+											/>
+										</div>
+                      );
+                    }
+                  })}
               </li>
             </ul>
           </div>
