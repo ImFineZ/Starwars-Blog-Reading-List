@@ -42,7 +42,6 @@ export const Navbar = () => {
 													actions.BorrarIdElement(i);
 												}}
 												className="bi bi-trash2-fill"
-                        
 											/>
 										</div>
                       );

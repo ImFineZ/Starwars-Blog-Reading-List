@@ -7,11 +7,13 @@ export const CharactersViews = () => {
   const { store, actions } = useContext(Context);
   const params = useParams();
   console.log(store.characterIndividual);
+  
   useEffect(() => {
     if (params?.theid) {
       actions.informacionIndividualPeople(params?.theid);
     }
   }, [params?.theid]);
+
   return (
     <div className="container">
       {/* characters {params?.theid} */}

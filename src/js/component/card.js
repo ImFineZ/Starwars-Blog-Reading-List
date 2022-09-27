@@ -18,7 +18,7 @@ export const Card = (props) => {
                   : `/characters/${props.id}`
               }
             >
-              Ver mas!
+              <button type="button" class="btn btn-outline-primary">Ver mas!</button>
             </Link>
           </div>
           <button onClick={()=>{
@@ -26,9 +26,9 @@ export const Card = (props) => {
               console.log(store)
             }}
            className="float-end">
-            <a className="btn btn-warning " > 
+            <div className="btn btn-warning " > 
               <i className="bi bi-suit-heart" />
-            </a>
+            </div>
           </button>
         </div>
       </div>
