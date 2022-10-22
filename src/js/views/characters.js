@@ -29,7 +29,7 @@ export const CharactersViews = () => {
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">{store.characterIndividual.name}</h5>
+            <h5 className="card-title">{store.characterIndividual.people_name}</h5>
             <hr style={{ color: "red" }} />
             <div className="container">
               <div className="row align-items-start">
@@ -54,7 +54,7 @@ export const CharactersViews = () => {
               </div>
               <div className="row align-items-center">
                 <small className="col" style={{ color: "red" }}>
-                  {store.characterIndividual.name}
+                  {store.characterIndividual.people_name}
                 </small>
                 <small className="col" style={{ color: "red" }}>
                   {store.characterIndividual.birth_year}

@@ -25,7 +25,7 @@ export const PlanetsViews = () => {
               alt="..."
             />
             <div className="card-body">
-              <h5 className="card-title">{store.planetIndividual.name}</h5>
+              <h5 className="card-title">{store.planetIndividual.planet_name}</h5>
               <hr style={{ color: "red" }} />
               <div className="container">
                 <div className="row align-items-start">
@@ -50,7 +50,7 @@ export const PlanetsViews = () => {
                 </div>
                 <div className="row align-items-center">
                   <small className="col" style={{ color: "red" }}>
-                    {store.planetIndividual.name}
+                    {store.planetIndividual.planet_name}
                   </small>
                   <small className="col" style={{ color: "red" }}>
                     {store.planetIndividual.climate}
